@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const Hero = () => {
@@ -20,7 +21,8 @@ const Hero = () => {
           <Button
             className="block w-full rounded border bg-primary px-32 py-1 text-lg font-bold text-white shadow hover:bg-primary focus:outline-none focus:ring active:bg-primary sm:w-auto"
           >
-            Get Started now
+            <Link href={'/sign-in'}>Get Started now</Link>
+           
           </Button>
   
 
