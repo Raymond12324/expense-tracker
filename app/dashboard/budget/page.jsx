@@ -3,7 +3,7 @@ import CreateBudget from './_components/CreateBudget'
 
 function page() {
   return (
-    <div>
+    <div className='mt-7'>
         
         <CreateBudget/>
     </div>

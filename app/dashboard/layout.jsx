@@ -7,7 +7,7 @@ function layout({children}) {
     <div className='fixed w-64 border shadow'>
     <Sidenav/>
     </div>
-    <div className='mx-64 p-5'>
+    <div className='ml-64'>
     {children}
     </div>
     
