@@ -12,10 +12,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
+    // <ClerkProvider>
     <html lang="en">
       <body className={outfit.className}>{children}</body>
     </html>
-    </ClerkProvider>
+    // </ClerkProvider>
   );
 }
