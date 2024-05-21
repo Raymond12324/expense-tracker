@@ -1,8 +1,14 @@
+"use client"
+
 import { LayoutGrid, PiggyBank, Receipt, Shield,Icon } from 'lucide-react'
 import Image from 'next/image'
-import React from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
 
 function sideNav() {
+
+    const path = usePathname();
 
     const links = [
         {
@@ -40,10 +46,12 @@ function sideNav() {
                 
 
             {links.map((link, index) => (
-               <h2 className='flex gap-2  text-gray-600 font-medium p-5 cursor-pointer rounded-md hover:text-primary hover:bg-[#1ec67821] hover:font-semibold'>
+                <Link href={link.href} key={index}>
+               <h2 className={`flex gap-2 text-gray-600 font-medium p-5 cursor-pointer rounded-md hover:text-primary hover:bg-[#1ec67821] hover:font-semibold ${path === link.href ? "text-primary bg-[#1ec67821]" : ""}`}>
                 <link.icon/>
                 {link.name}
                </h2>
+               </Link>
             ))}
          
         </div>
@@ -51,3 +59,6 @@ function sideNav() {
 }
 
 export default sideNav
+
+
+      
